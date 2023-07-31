@@ -7,9 +7,9 @@ import fs from 'fs'
 
 function buildBackground() {
   esbuild.buildSync({
-    entryPoints: ['src/background.ts'],
+    entryPoints: ['src/background.ts', 'src/preload.ts'],
     bundle: true,
-    outfile: 'dist/background.js',
+    outdir: "dist",
     platform: 'node',
     external: ['electron']
   })

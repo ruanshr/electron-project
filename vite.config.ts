@@ -5,7 +5,12 @@ import { ElectronDevPlugin } from './plugins/vite.electron.dev'
 import { ElectronBuildPlugin } from './plugins/vite.electron.build'
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), ElectronDevPlugin(), ElectronBuildPlugin()],
+  plugins: [
+    react(),
+    ElectronDevPlugin(), 
+    ElectronBuildPlugin()
+  ],
+  base: "./",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src")
